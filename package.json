@@ -1,0 +1,26 @@
+{
+  "name": "properties-mapper",
+  "version": "0.1.0",
+  "description": "This utility helps convert one JSON object with it's own properties to another specifing target properties",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SSharyk/properties-mapper.git"
+  },
+  "keywords": [
+    "JSON",
+    "mapper",
+    "property",
+    "properties",
+    "convertation"
+  ],
+  "author": "SSharyk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SSharyk/properties-mapper/issues"
+  },
+  "homepage": "https://github.com/SSharyk/properties-mapper#readme"
+}
