@@ -1,6 +1,6 @@
 {
   "name": "properties-mapper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This utility helps convert one JSON object with it's own properties to another specifing target properties",
   "main": "index.js",
   "scripts": {

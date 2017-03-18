@@ -2,7 +2,7 @@
 JSON Objects convertation utility
 
 ## Summary
-_Version_: 0.1.0
+_Version_: 0.1.1
 
 _Usage_: anywhere you need to rename your objects' properties
 
@@ -15,8 +15,8 @@ The utility allows you to rename properties of JSON objects in one line of code.
 2. Use `require('properties-mapper')` to import the functionality.
 3. The package contains the only function `map` that takes 4 arguments as an input:
   * `Object` which you want to convert
-  * `source` is a comma-separated string that contains properties' names that should be renamed
-  * `target` is a comma-separated string too that contains appropriate properties' names for result object
+  * `source` is either a comma-separated string or array that contains properties' names that should be renamed
+  * `target` is either a comma-separated string or array too that contains appropriate properties' names for result object
   * `isRecursive` flag (optional, `true` is default) which is set if the function should be called recursively for each nested object
 4. The function returns new object with renamed properties and stored appropriate values.
 
