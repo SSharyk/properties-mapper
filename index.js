@@ -2,23 +2,23 @@
  * Converts one JSON object to another using maps specified with from->to array
  *
  * obj {JSON Object} - Object need be converted,
- * source {string} - Comma-separated list of properties the object has
- * target {string} - Comma-separated list of properties the new object has have
+ * source {string} - Either comma-separated string or array of properties the object has
+ * target {string} - Either comma-separated string or array of properties the new object has have
  * isRecurcive {boolean} - True if nested objects should be converted too
- * @returns {JSON Object} New objwtc with renamed properties
+ * @returns {JSON Object} New object with renamed properties
  */
 function map(obj, source, target, isRecursive = true) {
 	// Check if parameters have invalid types
 	if ((typeof obj) != "object") throw new TypeError("The object should be JSON");
-	if ((typeof source) != "string") throw new TypeError("Source should be string");
-	if ((typeof target) != "string") throw new TypeError("Target should be string");
+	if ((typeof source) != "string" && (typeof source) != "array") throw new TypeError("Source should be aither string or array");
+	if ((typeof target) != "string" && (typeof target) != "array") throw new TypeError("Target should be aither string or array");
 
 	// result object init
 	let res = {};
 
 	// get array of properties need to be converted
-	let propS = source.replace(/ /g, '').split(",");
-	let propT = target.replace(/ /g, '').split(",");
+	let propS = (typeof source == "string") ? source.replace(/ /g, '').split(",") : source;
+	let propT = (typeof target == "string") ? target.replace(/ /g, '').split(",") : target;
  
  	// each property is checked ...
 	for (let propertyName in obj) {
